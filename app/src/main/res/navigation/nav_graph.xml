@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.android.example.shreebhagwatgita.view.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.android.example.shreebhagwatgita.view.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_versesFragment"
+            app:destination="@id/versesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/versesFragment"
+        android:name="com.android.example.shreebhagwatgita.view.fragments.VersesFragment"
+        android:label="fragment_verses"
+        tools:layout="@layout/fragment_verses" >
+        <action
+            android:id="@+id/action_versesFragment_to_versesDetailFragment"
+            app:destination="@id/versesDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/versesDetailFragment"
+        android:name="com.android.example.shreebhagwatgita.view.fragments.VersesDetailFragment"
+        android:label="fragment_verses_detail"
+        tools:layout="@layout/fragment_verses_detail" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.android.example.shreebhagwatgita.view.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_savedChaptersFragment"
+            app:destination="@id/savedChaptersFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_savedVersesFragment"
+            app:destination="@id/savedVersesFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedChaptersFragment"
+        android:name="com.android.example.shreebhagwatgita.view.fragments.SavedChaptersFragment"
+        android:label="fragment_saved_chapters"
+        tools:layout="@layout/fragment_saved_chapters" >
+        <action
+            android:id="@+id/action_savedChaptersFragment_to_versesFragment"
+            app:destination="@id/versesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedVersesFragment"
+        android:name="com.android.example.shreebhagwatgita.view.fragments.SavedVersesFragment"
+        android:label="fragment_saved_verses"
+        tools:layout="@layout/fragment_saved_verses" >
+        <action
+            android:id="@+id/action_savedVersesFragment_to_versesDetailFragment"
+            app:destination="@id/versesDetailFragment" />
+    </fragment>
+</navigation>

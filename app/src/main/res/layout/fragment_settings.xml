@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".view.fragments.SettingsFragment">
+
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llBhagvatGita"
+            android:layout_width="wrap_content"
+            android:layout_height="65.00dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="13.00dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="19.50dp"
+                android:layout_height="19.50dp"
+                android:src="@drawable/kalash" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2.60dp"
+                android:text="Shree Bhagavad Gita"
+                android:textColor="@color/orange"
+                android:textSize="26.00sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="19.50dp"
+                android:layout_height="19.50dp"
+                android:src="@drawable/kalash" />
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="65dp"
+            android:clickable="true"
+            android:elevation="2.60dp"
+            android:focusable="true"
+            app:cardCornerRadius="6.50dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/savedVerses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_iv_chapters"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:padding="6.50dp">
+
+                <LinearLayout
+                    android:id="@+id/llSavedChapters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="32.50dp"
+                        android:layout_height="32.50dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/save_texts" />
+
+                    <TextView
+                        android:id="@+id/tvSavedChapters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="2.60dp"
+                        android:layout_weight="0.8"
+                        android:text="Saved Chapters"
+                        android:textColor="@color/orange"
+                        android:textSize="18.20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="32.50dp"
+                        android:layout_height="32.50dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        app:tint="@color/orange" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llsavedVerses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="9.10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="32.50dp"
+                        android:layout_height="32.50dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/save" />
+
+                    <TextView
+                        android:id="@+id/tvSavedVerses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="2.60dp"
+                        android:layout_weight="0.8"
+                        android:text="Saved Verses"
+                        android:textColor="@color/orange"
+                        android:textSize="18.20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="32.50dp"
+                        android:layout_height="32.50dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        app:tint="@color/orange" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/backgroundImage1"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:alpha="0.2"
+        android:scaleType="centerInside"
+        android:src="@drawable/verse_top_right"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTop" />
+
+    <ImageView
+        android:id="@+id/backgroundImage2"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:alpha="0.2"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/verse_top_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundImage1" />
+
+
+    <ImageView
+        android:id="@+id/backgroundImage3"
+        android:layout_width="292dp"
+        android:layout_height="269dp"
+        android:alpha="0.2"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/krsna"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundImage2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTop"
+        app:layout_constraintVertical_bias="0.617" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2.60dp"
+        android:text="I hope you like the app"
+        android:textColor="@color/orange"
+        android:textSize="20.00sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundImage3"
+        app:layout_constraintVertical_bias="0.669" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

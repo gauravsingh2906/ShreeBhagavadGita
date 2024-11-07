@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvItemView"
+    android:elevation="2.60dp"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="6.50dp">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="6.50dp"
+            android:background="@drawable/chapter_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.9">
+
+                    <TextView
+                        android:id="@+id/tvChapterNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_shimmer"
+                        android:textStyle="bold"
+                        android:textSize="15.60sp"
+                        android:textColor="@color/orange"/>
+
+                    <TextView
+                        android:id="@+id/tvChapterNumbe"
+                        android:layout_width="130.00dp"
+                        android:layout_marginTop="9.10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_shimmer"
+                        android:textStyle="bold"
+                        android:textSize="21.60sp"
+                        android:textColor="@color/black"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivFavoriteFilled"
+                        android:layout_width="39dp"
+                        android:layout_height="39dp"
+                        android:src="@drawable/baseline_favorite_24"
+                        app:tint="@color/orange"
+                        android:hapticFeedbackEnabled="true"
+                        android:visibility="gone"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivFavorite"
+                        android:layout_width="39dp"
+                        android:layout_height="39.00dp"
+                        android:hapticFeedbackEnabled="true"
+
+                        android:src="@drawable/baseline_favorite_border_24"
+                        android:visibility="gone" />
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:background="@drawable/bg_shimmer"
+                android:text="The first chapter of the Bhagavad Gita - Arjuna Vishada Yoga introduces the setup, the setting,the characters and the circumstances that led to the epic battle of Mahabharata, fought between the Pand"
+                android:maxLines="4"
+                android:textColor="#E6C7BB"
+                android:layout_marginTop="6.50dp"
+                android:textSize="15.60sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="9.10dp">
+
+                <ImageView
+                    android:layout_width="36.40dp"
+                    android:layout_height="36.40dp"
+                    android:background="@drawable/bg_shimmer"
+                   />
+
+                <TextView
+                    android:id="@+id/tvVersesCount"
+                    android:layout_width="130.00dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_shimmer"
+                    android:textStyle="bold"
+                    android:layout_marginStart="13.00dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FFFFFF</color>
+    <color name="white">#FF000000</color>
+    <color name="splash">#FDC0BB</color>
+    <color name="chapterDetail">#696969</color>
+    <color name="orange">#FF5722</color>
+
+
+</resources>
